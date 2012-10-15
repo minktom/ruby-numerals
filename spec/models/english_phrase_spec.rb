@@ -73,12 +73,13 @@ describe EnglishPhrase do
     test_cases = {
       5_400 => 'five thousand and four hundred',
       22_000 => 'twenty-two thousand',
-      15_435_273 => 'fifteen million four hundred thirty-five thousand twohundred and seventy-three',
-      40_000_000 => 'forty million'
+      15_435_273 => 'fifteen million four hundred thirty-five thousand two hundred and seventy-three',
+      40_000_000 => 'forty million',
+      13_300_000 => 'thirteen million and three hundred thousand',
+      1_000_100_000 => 'one billion and one hundred thousand'
     }
     test_with_cases test_cases
   end
-
 
   context 'excercise example number conversion' do
     test_cases = {
@@ -86,6 +87,15 @@ describe EnglishPhrase do
       42   => 'forty-two',
       2001 => 'two thousand and one',
       1999 => 'nineteen hundred and ninety-nine'
+    }
+    test_with_cases test_cases
+  end
+
+  context 'minus number conversion' do
+    test_cases = {
+      -1 => 'minus one',
+      -22 => 'minus twenty-two',
+      -4040 => 'minus four thousand and forty'
     }
     test_with_cases test_cases
   end
